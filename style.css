@@ -1,0 +1,170 @@
+@font-face {
+  font-family: mojangles;
+  src: url(mojangles/mojangles.otf);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url(Image/background_bikinibottom1.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: mojangles, Arial, sans-serif;
+    color: white;
+    padding: 25px 0px 0px 25px;
+    
+}
+
+#background {
+    height: 100%;
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.header {
+  color: rgb(0, 140, 255);
+}
+
+@keyframes blink_rainbow {
+  0% {
+    color: red;
+  }
+  25% {
+    color: green;
+  }
+  50% {
+    color: blue;
+  }
+  75% {
+    color: pink;
+  }
+  100% {
+    color: red;
+  }
+}
+
+.rainbow_text {
+  animation: blink_rainbow 2s linear infinite;
+}
+
+.blur {
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+}
+
+img {
+    width: 250px;
+    height: 250px;
+}
+
+@keyframes swim1 {
+    0% {
+        left: 0vw;
+        top: 100px;
+        transform: scaleX(-1);
+    }
+    50% {
+        left: 80vw;
+        top: 300px;
+        transform: scaleX(-1);
+    }
+
+    51% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        left: 0vw;
+        top: 100px;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes swim2 {
+    0% {
+        right: 0vw;
+        bottom: 100px;
+        transform: scaleX(-1);
+    }
+    50% {
+        right: 80vw;
+        bottom: 300px;
+        transform: scaleX(-1);
+    }
+
+    51% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        right: 0vw;
+        bottom: 100px;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes dive1 {
+    0% {
+        left: 300px;
+        top: 0vw;
+    }
+    50% {
+        left: 600px;
+        top: 25vw;
+    }
+    100% {
+        left: 300px;
+        top: 0vw;
+    }
+}
+
+@keyframes dive2 {
+    0% {
+        right: 300px;
+        bottom: 10vw;
+    }
+    50% {
+        right: 600px;
+        bottom: 35vw;
+        transform: scaleX(1);
+    }
+    51% {
+        transform: scaleX(-1);
+    }
+    100% {
+        right: 300px;
+        bottom: 10vw;
+        transform: scaleX(-1);
+    }
+}
+
+#fish1 {
+    left: 100px;
+    top: 400px;
+    position: absolute;
+    animation: swim1 30s linear infinite running;
+}
+
+#fish2 {
+    right: 100px;
+    bottom: 100px;
+    position: absolute;
+    animation: swim2 15s linear infinite running;
+}
+
+#fish_spin {
+    left: 300px;
+    bottom: 1000px;
+    position: absolute;
+    animation: dive1 10s linear infinite running;
+}
+
+#submarine {
+    right: 100vw;
+    bottom: 0vw;
+    position: absolute;
+    animation: dive2 20s linear infinite running;
+}
